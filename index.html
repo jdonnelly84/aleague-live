@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#151A95">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="description" content="Unofficial A-League scores, fixtures, ladder and stats">
+<title>A-League Live</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://match.api.aleagues.football" crossorigin>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <a class="brand" href="#/home" aria-label="Home">
+      <span class="brand-a">A</span><span class="brand-word">LEAGUE</span><span class="brand-live">LIVE</span>
+    </a>
+    <div class="comp-switch" role="tablist" aria-label="Competition">
+      <button data-comp="men" role="tab">Men</button>
+      <button data-comp="women" role="tab">Women</button>
+    </div>
+    <button class="icon-btn" id="refresh" aria-label="Refresh">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="view" aria-live="polite"></main>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#/home" data-tab="home">
+    <svg viewBox="0 0 24 24"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg><span>Latest</span>
+  </a>
+  <a href="#/matches" data-tab="matches">
+    <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/></svg><span>Matches</span>
+  </a>
+  <a href="#/ladder" data-tab="ladder">
+    <svg viewBox="0 0 24 24"><path d="M3 4h18v3H3zm0 6.5h18v3H3zM3 17h18v3H3z"/></svg><span>Ladder</span>
+  </a>
+  <a href="#/stats" data-tab="stats">
+    <svg viewBox="0 0 24 24"><path d="M4 20h4V10H4v10zm6 0h4V4h-4v16zm6 0h4v-7h-4v7z"/></svg><span>Stats</span>
+  </a>
+  <a href="#/news" data-tab="news">
+    <svg viewBox="0 0 24 24"><path d="M20 3H4a1 1 0 0 0-1 1v14a3 3 0 0 0 3 3h13a2 2 0 0 0 2-2V4a1 1 0 0 0-1-1zm-1 16H6a1 1 0 0 1-1-1V5h14v14zM7 7h10v4H7zm0 6h10v1.5H7zm0 3h7v1.5H7z"/></svg><span>News</span>
+  </a>
+</nav>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
