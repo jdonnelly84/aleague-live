@@ -2,6 +2,8 @@
 
 An unofficial A-League Men and Women app, styled after aleagues.com.au and built for the Huawei P30 Pro (a 360 × 780 screen in Chrome). It's an installable web app (PWA): plain HTML, CSS and JS with no build step.
 
+**Live at: https://jdonnelly84.github.io/aleague-live/** (GitHub Pages, from the `main` branch of `jdonnelly84/aleague-live`). Any push to `main` updates it within about a minute.
+
 ## What it does
 
 - **Latest**: a live-match banner or a countdown to the next kick-off, this round's matches as a strip of cards, your club, the top 6, the latest results and news.
